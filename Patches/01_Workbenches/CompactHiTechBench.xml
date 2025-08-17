@@ -90,9 +90,6 @@
         
         <!-- Make it minifiable like the resized mod does -->
         <minifiedDef>MinifiedThing</minifiedDef>
-        <thingCategories>
-          <li>BuildingsProduction</li>
-        </thingCategories>
         
         <inspectorTabs>
           <li>ITab_Bills</li>
