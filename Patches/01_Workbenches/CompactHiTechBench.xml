@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-  <!-- Add compact hi-tech research bench as new item -->
+  <!-- Add compact hi-tech research bench based on vanilla pattern -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs</xpath>
     <value>
       <ThingDef ParentName="BenchBase">
         <defName>ResearchBenchHiTechCompact</defName>
         <label>compact hi-tech research bench</label>
-        <description>A space-efficient hi-tech research bench with reduced performance. Smaller footprint but higher material cost, reduced research speed, and increased power consumption. Compatible with all research facility enhancements.</description>
+        <description>A space-efficient hi-tech research bench. Smaller footprint but higher material cost and reduced research speed. Compatible with research facility enhancements.</description>
         <thingClass>Building_ResearchBench</thingClass>
-        <altitudeLayer>Building</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <pathCost>50</pathCost>
-        <blockWind>true</blockWind>
-        <fillPercent>0.5</fillPercent>
-        <useHitPoints>true</useHitPoints>
-        <designationCategory>Production</designationCategory>
-        <surfaceType>Item</surfaceType>
-        <canOverlapZones>false</canOverlapZones>
-        
-        <!-- Compact size -->
         <size>(3,1)</size>
-        <graphicData>
-          <texPath>Things/Building/Production/ResearchBenchHiTech</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <shaderType>CutoutComplex</shaderType>
-          <drawSize>(3.5,1.5)</drawSize>
-          <color>(0.7, 0.85, 1.0)</color>
-          <damageData>
-            <cornerTL>Damage/Corner</cornerTL>
-            <cornerTR>Damage/Corner</cornerTR>
-            <cornerBL>Damage/Corner</cornerBL>
-            <cornerBR>Damage/Corner</cornerBR>
-          </damageData>
-        </graphicData>
-        
-        <!-- Interaction cell positioning for 3x1 size -->
-        <hasInteractionCell>true</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        
-        <!-- Higher cost to balance the space advantage -->
         <costList>
           <Steel>200</Steel>
           <ComponentIndustrial>8</ComponentIndustrial>
           <Plasteel>40</Plasteel>
           <ComponentSpacer>2</ComponentSpacer>
         </costList>
-        
+        <graphicData>
+          <texPath>Things/Building/Production/ResearchBenchHiTech</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(3.5,1.5)</drawSize>
+          <color>(0.7, 0.85, 1.0)</color>
+        </graphicData>
         <statBases>
           <MaxHitPoints>180</MaxHitPoints>
           <WorkToBuild>20000</WorkToBuild>
@@ -55,7 +30,6 @@
           <ResearchSpeedFactor>0.85</ResearchSpeedFactor>
           <Mass>35</Mass>
         </statBases>
-        
         <comps>
           <li Class="CompProperties_Power">
             <compClass>CompPowerTrader</compClass>
@@ -70,40 +44,23 @@
             </linkableFacilities>
           </li>
         </comps>
-        
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
         <placeWorkers>
           <li>PlaceWorker_ShowFacilitiesConnections</li>
           <li>PlaceWorker_ReportWorkSpeedPenalties</li>
         </placeWorkers>
-        
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <minifiedDef>MinifiedThing</minifiedDef>
-        
-        <inspectorTabs>
-          <li>ITab_Bills</li>
-        </inspectorTabs>
-        
-        <!-- Add research workType specification -->
-        <researchPrerequisites>
-          <li>Microelectronics</li>
-        </researchPrerequisites>
-        
         <building>
-          <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
           <buildingTags>
             <li>Production</li>
             <li>Research</li>
           </buildingTags>
-          <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
-          <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
         </building>
-        
+        <designationCategory>Production</designationCategory>
         <designationHotKey>Misc4</designationHotKey>
-        
       </ThingDef>
     </value>
   </Operation>
-
-
-
 </Patch>
