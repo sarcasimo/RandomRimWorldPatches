@@ -56,6 +56,10 @@
           <Mass>35</Mass>
         </statBases>
         
+        <recipes>
+          <li>Research</li>
+        </recipes>
+
         <comps>
           <li Class="CompProperties_Power">
             <compClass>CompPowerTrader</compClass>
