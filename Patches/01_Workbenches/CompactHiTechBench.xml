@@ -64,7 +64,7 @@
           <li>Microelectronics</li>
         </researchPrerequisites>
         
-        <!-- VEF Recipe Inheritance: Inherit all research from hi-tech bench -->
+        <!-- VEF Recipe Inheritance: Inherit all research from hi-tech bench (1.6 namespace) -->
         <modExtensions>
           <li Class="VEF.Buildings.RecipeInheritanceExtension">
             <inheritRecipesFrom>
