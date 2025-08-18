@@ -1,0 +1,8 @@
+C:\Users\sarci\git\RandomRimWorldPatches\Assemblies\RandomRimWorldPatches.dll
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.csproj.AssemblyReference.cache
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.AssemblyInfoInputs.cache
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.AssemblyInfo.cs
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.csproj.CoreCompileInputs.cache
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRi.9574A6E8.Up2Date
+C:\Users\sarci\git\RandomRimWorldPatches\Source\obj\Debug\RandomRimWorldPatches.dll
