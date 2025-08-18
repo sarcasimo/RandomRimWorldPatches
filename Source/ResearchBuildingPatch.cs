@@ -8,7 +8,7 @@ namespace RandomRimWorldPatches
 {
     // Patch ResearchProjectDef.CanStartNow so the compact HiTech bench grants access
     // when the vanilla HiTechResearchBench is absent but the compact bench is present.
-    [HarmonyPatch(typeof(ResearchProjectDef), "CanStartNow")]
+    [HarmonyPatch(typeof(ResearchProjectDef), "CanStartNow", MethodType.Getter)]
     public static class ResearchBuildingPatch
     {
         [HarmonyPostfix]
