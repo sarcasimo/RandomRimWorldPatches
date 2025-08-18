@@ -100,4 +100,15 @@
     </value>
   </Operation>
 
+  <!-- Universal patch: Make research projects accept compact hi-tech bench -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef/requiredResearchBuilding[text()="HiTechResearchBench"]</xpath>
+    <value>
+      <requiredResearchBuilding>
+        <li>HiTechResearchBench</li>
+        <li>ResearchBenchHiTechCompact</li>
+      </requiredResearchBuilding>
+    </value>
+  </Operation>
+
 </Patch>
