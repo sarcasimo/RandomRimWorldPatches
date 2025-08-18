@@ -6,7 +6,7 @@
     <xpath>Defs</xpath>
     <value>
       <ThingDef ParentName="BenchBase">
-        <defName>HiTechResearchBenchCompact</defName>
+        <defName>ResearchBenchHiTechCompact</defName>
         <label>compact hi-tech research bench</label>
         <description>A space-efficient hi-tech research bench. Smaller footprint but higher material cost. Compatible with all research facility enhancements.</description>
         <thingClass>Building_ResearchBench</thingClass>
@@ -83,7 +83,7 @@
         </placeWorkers>
         
         <researchPrerequisites>
-          <li>HiTechResearchBench</li>
+          <li>ResearchBenchHiTech</li>
         </researchPrerequisites>
         
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -108,11 +108,11 @@
     </value>
   </Operation>
 
-  <!-- Reverse compatibility: Make any facility that links to vanilla HiTechResearchBench also link to compact version -->
+  <!-- Reverse compatibility: Make any facility that links to vanilla ResearchBenchHiTech also link to compact version -->
   <Operation Class="PatchOperationAdd">
-    <xpath>(/Defs/thingDef | /Defs/ThingDef)/comps/li[@Class="CompProperties_Facility"]/linkableTo[./li[text()="HiTechResearchBench"]]</xpath>
+    <xpath>(/Defs/thingDef | /Defs/ThingDef)/comps/li[@Class="CompProperties_Facility"]/linkableTo[./li[text()="ResearchBenchHiTech"]]</xpath>
     <value>
-      <li>HiTechResearchBenchCompact</li>
+      <li>ResearchBenchHiTechCompact</li>
     </value>
   </Operation>
 
