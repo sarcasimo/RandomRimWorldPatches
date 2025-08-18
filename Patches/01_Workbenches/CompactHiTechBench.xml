@@ -89,25 +89,11 @@
             <li>Production</li>
             <li>Research</li>
           </buildingTags>
-          <facilityTags>
-            <li>HiTechResearchBench</li>
-          </facilityTags>
         </building>
         
         <designationHotKey>Misc4</designationHotKey>
         
       </ThingDef>
-    </value>
-  </Operation>
-
-  <!-- Universal patch: Make research projects accept compact hi-tech bench -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ResearchProjectDef/requiredResearchBuilding[text()="HiTechResearchBench"]</xpath>
-    <value>
-      <requiredResearchBuilding>
-        <li>HiTechResearchBench</li>
-        <li>ResearchBenchHiTechCompact</li>
-      </requiredResearchBuilding>
     </value>
   </Operation>
 

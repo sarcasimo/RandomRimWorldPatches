@@ -20,6 +20,10 @@ This is a highly customized patch collection for my specific mod loadout.</descr
       <packageId>Ludeon.RimWorld</packageId>
       <displayName>Core</displayName>
     </li>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
   </modDependencies>
   
   <loadAfter>
