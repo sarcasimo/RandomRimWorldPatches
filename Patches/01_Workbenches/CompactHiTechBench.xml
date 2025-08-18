@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Add compact hi-tech research bench using VEF Recipe Inheritance -->
+  <!-- Add compact hi-tech research bench based on working mod pattern -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs</xpath>
     <value>
       <ThingDef ParentName="BenchBase">
         <defName>ResearchBenchHiTechCompact</defName>
         <label>compact hi-tech research bench</label>
-        <description>A space-efficient hi-tech research bench. Smaller footprint but higher material cost and reduced research speed. Compatible with all research facility enhancements and inherits all research capabilities from the standard hi-tech bench.</description>
+        <description>A space-efficient hi-tech bench with computers and electronic measurement equipment. Allows more rapid research, and unlocks advanced research projects.</description>
         <thingClass>Building_ResearchBench</thingClass>
         <size>(3,1)</size>
+        <minifiedDef />
+        <thingCategories Inherit="false" />
         <costList>
           <Steel>200</Steel>
           <ComponentIndustrial>8</ComponentIndustrial>
@@ -22,15 +24,29 @@
           <shaderType>CutoutComplex</shaderType>
           <drawSize>(3.5,1.5)</drawSize>
           <color>(0.7, 0.85, 1.0)</color>
+          <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+          </damageData>
         </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
         <statBases>
           <MaxHitPoints>180</MaxHitPoints>
           <WorkToBuild>20000</WorkToBuild>
           <Flammability>1.0</Flammability>
           <ResearchSpeedFactor>0.85</ResearchSpeedFactor>
-          <Mass>35</Mass>
         </statBases>
-        <comps>
+        <comps Inherit="False">
+          <li Class="CompProperties_ReportWorkSpeed">
+            <workSpeedStat>ResearchSpeedFactor</workSpeedStat>
+            <displayReasons>false</displayReasons>
+          </li>
           <li Class="CompProperties_Power">
             <compClass>CompPowerTrader</compClass>
             <basePowerConsumption>300</basePowerConsumption>
@@ -44,43 +60,26 @@
             </linkableFacilities>
           </li>
         </comps>
-        <hasInteractionCell>true</hasInteractionCell>
+        <fillPercent>0.5</fillPercent>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <surfaceType>Item</surfaceType>
+        <designationHotKey>Misc4</designationHotKey>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <placeWorkers>
           <li>PlaceWorker_ShowFacilitiesConnections</li>
+          <li>PlaceWorker_PreventInteractionSpotOverlap</li>
           <li>PlaceWorker_ReportWorkSpeedPenalties</li>
         </placeWorkers>
-        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <building>
-          <buildingTags>
-            <li>Production</li>
-            <li>Research</li>
-          </buildingTags>
-        </building>
-        <designationCategory>Production</designationCategory>
-        <designationHotKey>Misc4</designationHotKey>
         <researchPrerequisites>
           <li>Microelectronics</li>
         </researchPrerequisites>
-        
-        <!-- VEF Recipe Inheritance: Inherit all research from hi-tech bench (1.6 namespace) -->
-        <modExtensions>
-          <li Class="VEF.Buildings.RecipeInheritanceExtension">
-            <inheritRecipesFrom>
-              <li>HiTechResearchBench</li>
-            </inheritRecipesFrom>
-          </li>
-        </modExtensions>
+        <building>
+          <paintable>true</paintable>
+        </building>
       </ThingDef>
-    </value>
-  </Operation>
-
-  <!-- Add our compact bench to the Research WorkGiver -->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/WorkGiverDef[defName="DoBillsResearchBench"]/fixedBillGiverDefs</xpath>
-    <value>
-      <li>ResearchBenchHiTechCompact</li>
     </value>
   </Operation>
 </Patch>
