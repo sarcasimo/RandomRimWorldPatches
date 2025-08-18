@@ -10,6 +10,15 @@
         <label>compact hi-tech research bench</label>
         <description>A space-efficient hi-tech research bench with reduced performance. Smaller footprint but higher material cost, reduced research speed, and increased power consumption. Compatible with all research facility enhancements.</description>
         <thingClass>Building_ResearchBench</thingClass>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <blockWind>true</blockWind>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>true</useHitPoints>
+        <designationCategory>Production</designationCategory>
+        <surfaceType>Item</surfaceType>
+        <canOverlapZones>false</canOverlapZones>
         
         <!-- Compact size -->
         <size>(3,1)</size>
@@ -66,10 +75,6 @@
           <li>PlaceWorker_ShowFacilitiesConnections</li>
           <li>PlaceWorker_ReportWorkSpeedPenalties</li>
         </placeWorkers>
-        
-        <researchPrerequisites>
-          <li>ResearchBenchHiTech</li>
-        </researchPrerequisites>
         
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <minifiedDef>MinifiedThing</minifiedDef>
