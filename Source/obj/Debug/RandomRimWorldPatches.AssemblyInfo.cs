@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomRimWorldPatches")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d02ce23207e285b0029fbfb12ef1661688fee04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+462b99883e03b05ed73063648ccdb4f785236a8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomRimWorldPatches")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomRimWorldPatches")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
