@@ -89,6 +89,9 @@
             <li>Production</li>
             <li>Research</li>
           </buildingTags>
+          <facilityTags>
+            <li>HiTechResearchBench</li>
+          </facilityTags>
         </building>
         
         <designationHotKey>Misc4</designationHotKey>
