@@ -83,12 +83,19 @@
           <li>ITab_Bills</li>
         </inspectorTabs>
         
+        <!-- Add research workType specification -->
+        <researchPrerequisites>
+          <li>Microelectronics</li>
+        </researchPrerequisites>
+        
         <building>
           <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
           <buildingTags>
             <li>Production</li>
             <li>Research</li>
           </buildingTags>
+          <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+          <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
         </building>
         
         <designationHotKey>Misc4</designationHotKey>
@@ -97,15 +104,6 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName="DoBillsResearchBench"]/fixedBillGiverDefs</xpath>
-    <value>
-      <fixedBillGiverDefs>
-        <li>SimpleResearchBench</li>
-        <li>HiTechResearchBench</li>
-        <li>ResearchBenchHiTechCompact</li>
-      </fixedBillGiverDefs>
-    </value>
-  </Operation>
+
 
 </Patch>
