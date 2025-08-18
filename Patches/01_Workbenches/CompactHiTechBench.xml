@@ -56,10 +56,6 @@
           <Mass>35</Mass>
         </statBases>
         
-        <recipes>
-          <li>Research</li>
-        </recipes>
-
         <comps>
           <li Class="CompProperties_Power">
             <compClass>CompPowerTrader</compClass>
@@ -98,6 +94,17 @@
         <designationHotKey>Misc4</designationHotKey>
         
       </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName="DoBillsResearchBench"]/fixedBillGiverDefs</xpath>
+    <value>
+      <fixedBillGiverDefs>
+        <li>SimpleResearchBench</li>
+        <li>HiTechResearchBench</li>
+        <li>ResearchBenchHiTechCompact</li>
+      </fixedBillGiverDefs>
     </value>
   </Operation>
 
