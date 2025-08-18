@@ -8,9 +8,10 @@ namespace RandomRimWorldPatches
     {
         static RandomRimWorldPatchesMod()
         {
+            // Initialize Harmony (even though we're not using patches)
             var harmony = new Harmony("sarcasimo.randomrimworldpatches");
-            harmony.PatchAll();
-            Log.Message("[Random RimWorld Patches] Harmony patches applied successfully!");
+            // No patches to apply - VEF handles everything!
+            Log.Message("[Random RimWorld Patches] Loaded successfully! Using VEF for functionality.");
         }
     }
 }

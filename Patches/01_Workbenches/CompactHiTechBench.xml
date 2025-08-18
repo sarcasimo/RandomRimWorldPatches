@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Add compact hi-tech research bench based on vanilla pattern -->
+  <!-- Add compact hi-tech research bench using VEF Recipe Inheritance -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs</xpath>
     <value>
       <ThingDef ParentName="BenchBase">
         <defName>ResearchBenchHiTechCompact</defName>
         <label>compact hi-tech research bench</label>
-        <description>A space-efficient hi-tech research bench. Smaller footprint but higher material cost and reduced research speed. Compatible with research facility enhancements.</description>
+        <description>A space-efficient hi-tech research bench. Smaller footprint but higher material cost and reduced research speed. Compatible with all research facility enhancements and inherits all research capabilities from the standard hi-tech bench.</description>
         <thingClass>Building_ResearchBench</thingClass>
         <size>(3,1)</size>
         <costList>
@@ -60,7 +60,27 @@
         </building>
         <designationCategory>Production</designationCategory>
         <designationHotKey>Misc4</designationHotKey>
+        <researchPrerequisites>
+          <li>Microelectronics</li>
+        </researchPrerequisites>
+        
+        <!-- VEF Recipe Inheritance: Inherit all research from hi-tech bench -->
+        <modExtensions>
+          <li Class="VEF.Buildings.RecipeInheritanceExtension">
+            <inheritRecipesFrom>
+              <li>HiTechResearchBench</li>
+            </inheritRecipesFrom>
+          </li>
+        </modExtensions>
       </ThingDef>
+    </value>
+  </Operation>
+
+  <!-- Add our compact bench to the Research WorkGiver -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/WorkGiverDef[defName="DoBillsResearchBench"]/fixedBillGiverDefs</xpath>
+    <value>
+      <li>ResearchBenchHiTechCompact</li>
     </value>
   </Operation>
 </Patch>

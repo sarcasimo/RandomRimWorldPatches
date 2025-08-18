@@ -24,6 +24,10 @@ This is a highly customized patch collection for my specific mod loadout.</descr
       <packageId>brrainz.harmony</packageId>
       <displayName>Harmony</displayName>
     </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+    </li>
   </modDependencies>
   
   <loadAfter>
@@ -34,5 +38,6 @@ This is a highly customized patch collection for my specific mod loadout.</descr
     <li>Ludeon.RimWorld.Biotech</li>
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>Ludeon.RimWorld.Odyssey</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
   </loadAfter>
 </ModMetaData>
